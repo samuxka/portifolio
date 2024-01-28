@@ -75,6 +75,12 @@ button {
     color: #00ccff;
 }
 
+.navbar.sticky {
+    padding: 8px 5%;
+    background: transparent;
+    backdrop-filter: blur(35px);
+}
+
 button {
     padding: 10px 50px;
     background-color: #00ccff;
@@ -93,20 +99,23 @@ button:hover {
 section{
     width: 100%;
     height: 100vh;
+    background-color: #00000081;
 }
 
 .home{
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
 
-.content{
-    margin: 10%;
+.home .content{
+    margin-left: 5%;
+    display: grid;
 }
 
 .home .content .text h3{
-    color: #f0f8ff;
+    color: #b3b3b3;
     font-family: montserrat-medium;
     font-size: 20px;
     margin-bottom: -20px;
@@ -116,16 +125,80 @@ section{
     color: #00ccff;
     font-family: qatar;
     font-size: 7rem;
-    margin-bottom: -20px;
+    margin-bottom: -30px;
 }
 
 .home .content .text h2{
     color: #f0f8ff;
     font-family: montserrat-semibold;
     font-size: 30px;
+    margin-bottom: 30px;
 }
 
-#quote-text {
-    font-size: 24px;
-    font-family: poppins;
+.sobre .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 5% 0px 5%;
+}
+
+.sobre .content .text {
+    width: 50%;
+    /* Defina a largura desejada para o bloco de texto */
+}
+
+.sobre .content .photo {
+    width: 30%;
+    /* Defina a largura desejada para o bloco da foto */
+}
+
+.sobre .content img {
+    width: 100%;
+    /* Certifique-se de que a imagem da foto ocupe 100% da largura do bloco */
+    border-radius: 10px;
+    /* Adicione borda arredondada à imagem, se desejar */
+    animation: shadow 5s infinite ;
+}
+
+
+.sobre .content .text h1{
+    color: #00ccff;
+    font-family: qatar;
+    font-size: 5rem;
+}
+
+.sobre .content .text p{
+    color: #f0f8ff;
+    font-family: montserrat-semibold;
+    margin-bottom: 30px;
+}
+
+.sobre .content .text a{
+    padding: 15px 50px;
+    background: #00ccff;
+    transition: all .50s ease;
+}
+
+.sobre .content .text a:hover{
+    background: none;
+    color: #f0f8ff;
+    border: 1px solid #00ccff;
+}
+
+@keyframes shadow{
+    0%{
+        box-shadow: 0px 0px 20px 3px #00ccff;
+    }
+    25%{
+        box-shadow: 0px 0px 20px 2px #3ed8ff;
+    }
+    50%{
+        box-shadow: 0px 0px 20px 3px #a0e7f8;
+    }
+    75%{
+        box-shadow: 0px 0px 20px 2px #3ed8ff;
+    }
+    100%{
+        box-shadow: 0px 0px 20px 3px #00ccff;
+    }
 }
